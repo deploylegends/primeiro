@@ -1,5 +1,19 @@
+Definindo nome e email do usuário no git
+git config --global user.email "deploylegends@gmail.com"
+git config --global user.name "deploylegends"
+
 Iniciar o repositório
 git Init
 
 Verifica o status do git
 git status
+
+Adiciona o Arquivo no git
+git add nomearquivo
+
+Adiciona Arquivos de uma pasta
+git add .
+
+Commit cria uma versão do arquivo ou projeto
+git commit -m "Comentário"
+
