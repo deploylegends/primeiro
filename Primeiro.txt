@@ -81,7 +81,14 @@ git pull origin master
 
 
 Obs:
-Se você não clonou um repositório existente e quer conectar seu repositório a um servidor remoto, você deve adicioná-lo com
+1. Terei que procurar mais, mas ao que parece depois de transmistir o arquivo para o GitHub localmente deve-se
+Adicionar novamente o arquivo a git 
+git add nomedoarquivo
+git commit -m "Comentário"
+git push origin prototipoprimeiro
+
+
+2. Se você não clonou um repositório existente e quer conectar seu repositório a um servidor remoto, você deve adicioná-lo com
 git remote add origin <servidor>
 Agora você é capaz de enviar suas alterações para o servidor remoto selecionado.
 
