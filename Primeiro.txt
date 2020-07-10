@@ -80,6 +80,12 @@ Atualiza a master local
 git pull origin master
 
 
+Obs:
+Se você não clonou um repositório existente e quer conectar seu repositório a um servidor remoto, você deve adicioná-lo com
+git remote add origin <servidor>
+Agora você é capaz de enviar suas alterações para o servidor remoto selecionado.
+
+
 Referências Bibliográficas
 
 https://medium.com/nstech/git-e-github-por-que-e-como-usar-parte-2-d00c3b248822
