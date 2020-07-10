@@ -1,19 +1,102 @@
-Definindo nome e email do usuário no git
+Etapa 0 - Infraestrutura
+Criar usuário no GitHub
+Baixar e instlar Git
+
+Etapa 1 - Operações Básicas com Git
+
+Criar uma pasta que será usada como repositório
+Criar o arquivo(s) que deseja que esteja no repositório
+
+Definindo nome e email do usuário no git para registrar que está fazendo as operaçõe com o Git
 git config --global user.email "deploylegends@gmail.com"
 git config --global user.name "deploylegends"
 
+Entrar na pasta que será usada como repositório e usando GitBash
 Iniciar o repositório
 git Init
 
 Verifica o status do git
 git status
 
-Adiciona o Arquivo no git
+Para adicionar ao git o arquivo criado na pasta
 git add nomearquivo
 
-Adiciona Arquivos de uma pasta
+Caso queria adicionar vários arquivos contidos numa pasta de uma vez
 git add .
 
-Commit cria uma versão do arquivo ou projeto
+Commit cria uma versão do arquivo ou projeto, a cada commit cria-se uma nova versão no git mesmo sendo apenas um arquivo.
 git commit -m "Comentário"
+
+
+Etapa 2 - Git e GitHub
+Criar o repositório com o mesmo nome no GitHub
+
+Setar o seu repositório
+git remote add origin https://github.com/nomedoseurepositorio
+
+Subindo os arquivos para o repositório via Git, solicitará login e senha do GitHub
+git push origin master
+
+Clonando repositórios
+git clone https://github.com/nomedorepositorio
+
+Etapa 3 - Branch
+
+Temos Branch Master - Projeto principal e outros Branchs para testes
+
+Criar um branch - Protótipo do Primeiro
+git branch prototipoprimeiro
+
+Verificar branchs ativas
+git branch
+
+Tornar outra branch ativa
+git checkout prototipoprimeiro
+
+Comando para criar e trocar a branch ao mesmo tempo
+git checkout -b prototipoprimeiro
+
+Verificando o Status, adicionando o arquivos e realiza o commit
+git status
+git add .
+git commit -m "Faz commit do arquivo na branch"
+
+Para enviar a branch para o GitHub
+git push origin prototipoprimeiro
+
+No gitbhub podemos realizar o pull request que é um pedido de fusão do conteúdo entre brunch secundária e a brunch master
+clicando no botão New Pull Request.
+Aparecerá uma tela de comparação, clicar em Create Pull Request
+O Git Hub verifica as duas branchs não havendo conflitos, permite que faça o Merge
+Nesse momento temos o Code Review, que envia uma URL para equipe de desenvolvimento fazer a revisão do código.
+Se estiver tudo correto aprovam a Pull Request caso contrário são realizados comentários nas partes de códigos a serem corrigidas.
+Caso tudo esteja correto realizar o Merge Pull Request.
+A branch pode ser deletada Delete Branch
+
+Voltando para a master
+git checkout master
+
+Atualiza a master local
+git pull origin master
+
+
+Obs:
+1. Terei que procurar mais, mas ao que parece depois de transmistir o arquivo para o GitHub localmente deve-se
+Adicionar novamente o arquivo a git 
+git add nomedoarquivo
+git commit -m "Comentário"
+git push origin prototipoprimeiro
+
+
+2. Se você não clonou um repositório existente e quer conectar seu repositório a um servidor remoto, você deve adicioná-lo com
+git remote add origin <servidor>
+Agora você é capaz de enviar suas alterações para o servidor remoto selecionado.
+
+
+Referências Bibliográficas
+
+https://medium.com/nstech/git-e-github-por-que-e-como-usar-parte-2-d00c3b248822
+https://rogerdudler.github.io/git-guide/index.pt_BR.html
+https://woliveiras.com.br/posts/introdu%C3%A7%C3%A3o-a-versionamento-de-c%C3%B3digo-e-conhecendo-o-git/
+
 
