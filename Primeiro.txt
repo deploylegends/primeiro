@@ -1,19 +1,58 @@
-Definindo nome e email do usuário no git
+Etapa 0 - Infraestrutura
+Criar usuário no GitHub
+Baixar e instlar Git
+
+Etapa 1 - Operações Básicas com Git
+
+Criar uma pasta que será usada como repositório
+Criar o arquivo(s) que deseja que esteja no repositório
+
+Definindo nome e email do usuário no git para registrar que está fazendo as operaçõe com o Git
 git config --global user.email "deploylegends@gmail.com"
 git config --global user.name "deploylegends"
 
+Entrar na pasta que será usada como repositório e usando GitBash
 Iniciar o repositório
 git Init
 
 Verifica o status do git
 git status
 
-Adiciona o Arquivo no git
+Para adicionar ao git o arquivo criado na pasta
 git add nomearquivo
 
-Adiciona Arquivos de uma pasta
+Caso queria adicionar vários arquivos contidos numa pasta de uma vez
 git add .
 
-Commit cria uma versão do arquivo ou projeto
+Commit cria uma versão do arquivo ou projeto, a cada commit cria-se uma nova versão no git mesmo sendo apenas um arquivo.
 git commit -m "Comentário"
 
+
+Etapa 2 - Git e GitHub
+Criar o repositório com o mesmo nome no GitHub
+
+Setar o seu repositório
+git remote add origin https://github.com/nomedoseurepositorio
+
+Subindo os arquivos para o repositório via Git, solicitará login e senha do GitHub
+git push origin master
+
+Clonando repositórios
+git clone https://github.com/nomedorepositorio
+
+Etapa 3 - Branch
+
+Temos Branch Master - Projeto principal e outros Branchs para testes
+
+Criar um branch - Protótipo do Primeiro
+git branch prototipoprimeiro
+
+Verificar branchs ativas
+git branch
+
+Tornar outra branch ativa
+git checkout prototipoprimeiro
+
+Comando para criar e trocar a branch ao mesmo tempo
+
+git checkout -b prototipoprimeiro
